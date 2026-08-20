@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050914">
+  <title>Future Solution — WiFi & Networking</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+      <a class="brand" href="#" aria-label="Future Solution home">
+        <img src="assets/future-solution-logo.png" alt="Future Solution">
+      </a>
+
+      <label class="search">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Search for products..." autocomplete="off">
+      </label>
+
+      <button class="balance control-btn" id="balanceBtn" aria-label="My balance">
+        <span class="balance-icon">▣</span>
+        <span><small>My Balance</small><strong>৳ 1,250.00</strong></span>
+      </button>
+
+      <button class="icon-btn action-btn" id="cartBtn" aria-label="Cart">🛒<b id="cartCount">0</b></button>
+      <button class="icon-btn action-btn" id="notifyBtn" aria-label="Notifications">♧<b>3</b></button>
+
+      <div class="profile-wrap">
+        <button class="profile-btn control-btn" id="profileBtn">♙ <span>My Profile</span></button>
+        <div class="dropdown profile-menu" id="profileMenu">
+          <button>♙ My Profile</button>
+          <button>▤ Orders</button>
+          <button>⇄ Transactions</button>
+          <button>⌖ Addresses</button>
+          <button>♧ Support</button>
+          <button class="danger" id="logoutBtn">↪ Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="pill">★ PINNED</span>
+          <h1>Best Performance.<br><em>Unbeatable Stability.</em></h1>
+          <h2>High Power Dual Band WiFi Router</h2>
+          <p>Faster Speed <i>|</i> Wider Coverage <i>|</i> More Devices</p>
+
+          <div class="specs">
+            <div><strong>◉ 1200 Mbps</strong><span>Speed</span></div>
+            <div><strong>⌁ Dual Band</strong><span>2.4 / 5GHz</span></div>
+            <div><strong>♒ 5dBi</strong><span>Antennas</span></div>
+          </div>
+
+          <button class="primary-btn order-btn" data-order="TP-Link Archer C64">🛒 Order Now <span>→</span></button>
+        </div>
+
+        <div class="hero-product">
+          <div class="secure-card">♢ <span><strong>Stable<br>Secure</strong><small>Always On</small></span></div>
+          <div class="wifi-rings"></div>
+          <div class="router-hero">
+            <div class="antenna a1"></div><div class="antenna a2"></div><div class="antenna a3"></div><div class="antenna a4"></div>
+            <div class="router-top">TP-Link</div>
+            <div class="leds"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="slider-dots" id="heroDots">
+            <button class="active"></button><button></button><button></button><button></button><button></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-row">
+        <div>♢ <span><strong>100% Original</strong><small>Best quality products</small></span></div>
+        <div>▣ <span><strong>Fast Delivery</strong><small>Quick & safe delivery</small></span></div>
+        <div>⟳ <span><strong>Easy Return</strong><small>7 days return policy</small></span></div>
+        <div>♧ <span><strong>24/7 Support</strong><small>We're always here to help</small></span></div>
+      </section>
+
+      <section class="products-section">
+        <div class="section-head">
+          <h2>🔥 Popular Products</h2>
+          <button id="viewAllBtn">View All →</button>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="footer-panels">
+        <div><h3>MENU</h3><button>♙ My Profile</button><button>▤ All Category</button><button>▤ Orders</button><button>⇄ Transactions</button><button>⌖ Addresses</button><button>♧ Support</button><button>↪ Logout</button></div>
+        <div><h3>ALL CATEGORY</h3><button>WiFi Router　›</button><button>Mesh System　›</button><button>Range Extender　›</button><button>Network Switch　›</button><button>Access Point　›</button><button>Network Adapter　›</button><button>Cables & Connectors　›</button><button>Accessories　›</button></div>
+        <div><h3>SUPPORT</h3><button>ⓘ Help Center</button><button>ⓘ Shipping Policy</button><button>ⓘ Return Policy</button><button>ⓘ Privacy Policy</button><button>ⓘ Terms & Conditions</button><p>Stay Connected</p><div class="socials"><a href="#">f</a><a href="#">➤</a><a href="#">◉</a><a href="#">▶</a></div></div>
+        <div><h3>NEWSLETTER</h3><p>Subscribe to get updates on new products and offers.</p><form id="newsletter"><input type="email" placeholder="Enter your email" required><button>Subscribe</button></form><p>We Accept</p><strong class="payments">VISA　●　bkash　নগদ</strong></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Future Solution — WiFi & Networking Solution. All rights reserved.</span>
+      <span>Made with ♥ for better connection</span>
+    </footer>
+  </div>
+
+  <div class="drawer-backdrop" id="backdrop"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-head"><img src="assets/future-solution-logo.png" alt="Future Solution"><button id="closeDrawer">×</button></div>
+    <button>♙ My Profile <span>›</span></button>
+    <button id="drawerCategory">▤ All Category <span>›</span></button>
+    <div class="drawer-submenu" id="drawerCategories">
+      <button data-category="all">All Products</button><button data-category="router">WiFi Router</button>
+      <button data-category="mesh">Mesh System</button><button data-category="extender">Range Extender</button>
+      <button data-category="switch">Network Switch</button><button data-category="access">Access Point</button>
+    </div>
+    <button>♧ Support <span>›</span></button>
+    <button>➤ Telegram</button>
+    <button>✉ Mail</button>
+    <hr>
+    <button class="danger" id="drawerLogout">↪ Logout</button>
+  </aside>
+
+  <aside class="side-panel" id="cartPanel">
+    <div class="panel-head"><h2>Your Cart</h2><button class="close-panel">×</button></div>
+    <div id="cartItems"><p class="empty">Your cart is empty.</p></div>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">৳ 0</strong></div>
+    <button class="primary-btn full" id="checkoutBtn">Checkout</button>
+  </aside>
+
+  <aside class="side-panel" id="notifyPanel">
+    <div class="panel-head"><h2>Notifications</h2><button class="close-panel">×</button></div>
+    <div class="notification">🎉 New router deals are live.</div>
+    <div class="notification">🚚 Fast delivery available.</div>
+    <div class="notification">↩ 7-day return policy on eligible products.</div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
